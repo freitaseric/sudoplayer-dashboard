@@ -1,5 +1,8 @@
+/* eslint-disable camelcase */
+import { AppFooter } from '@/components/AppFooter'
+import { AppHeaderDesktop, AppHeaderMobile } from '@/components/AppHeader'
+import { AppSettings } from '@/components/AppSettings'
 import type { Metadata } from 'next'
-// eslint-disable-next-line camelcase
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
@@ -28,7 +31,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <AppHeaderDesktop />
+        <AppHeaderMobile />
         {children}
+        <AppSettings />
+        <AppFooter />
       </body>
     </html>
   )
